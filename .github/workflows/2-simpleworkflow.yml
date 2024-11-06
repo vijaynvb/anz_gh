@@ -1,0 +1,8 @@
+name: simple workflow 1
+on: workflow_dispatch
+jobs:
+  my-first-job:
+    name: my first job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "bye world" 
