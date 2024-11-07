@@ -1,8 +1,10 @@
 name: 4-EventTriggers
-on: 
-  push:
-    branches:
-      - devbranch
+on:
+  schedule:
+    - cron: '*/1 0 * * *' #run evey 1 minutes 
+  #push:
+  #  branches:
+  #    - devbranch
 jobs:
   my-first-job:
     name: my first job
