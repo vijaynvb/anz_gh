@@ -1,0 +1,14 @@
+name: 5-Actions
+on: workflow_dispatch
+jobs:
+  my-first-job:
+    name: my first job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+            distribution: 'adopt'
+            java-version: '11'
+      - run: echo "hello world"
+      - run: mvn build
