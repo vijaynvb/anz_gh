@@ -7,6 +7,9 @@ on:
         type: boolean
         description: Whether unit tests will pass or not
         default: true
+      name:
+        type: string
+        description: enter your name
 
 jobs:
   lint-build:
