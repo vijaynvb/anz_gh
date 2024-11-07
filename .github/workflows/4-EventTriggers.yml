@@ -1,7 +1,8 @@
 name: 4-EventTriggers
-on:
-  schedule:
-    - cron: '*/1 0 * * *' #run evey 1 minutes 
+on: workflow_dispatch 
+  #[push, pull_request]
+  #schedule:
+  #  - cron: '*/1 0 * * *' #run evey 1 minutes 
   #push:
   #  branches:
   #    - devbranch
