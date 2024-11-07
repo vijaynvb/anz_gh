@@ -11,4 +11,5 @@ jobs:
             distribution: 'adopt'
             java-version: '11'
       - run: echo "hello world"
+      - run: ls -l
       - run: mvn build
