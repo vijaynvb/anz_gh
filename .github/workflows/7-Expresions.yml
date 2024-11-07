@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: print the event 
         run: echo Event name is ${{ github.event_name }}
-      - if: github.event_name == "push"
+      - if: github.event_name == 'push'
         name: Conditional Step Using an Expression
         run: echo "This is a push to the master branch."
-      - if: github.event_name == "workflow_dispatch"
-        name: Conditional Step Using an Expression
+      - name: Conditional Step Using an Expression
+        if: github.event_name  == 'workflow_dispatch'
         run: echo "This is a workflow dispatch to the master branch."
