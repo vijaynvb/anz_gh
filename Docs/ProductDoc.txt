@@ -1,2 +1,6 @@
 
-This project is to do someting  
+This project is to do something  
+
+some content added in devbranch
+
+something
