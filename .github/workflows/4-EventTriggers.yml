@@ -1,0 +1,11 @@
+name: 4-EventTriggers
+on: 
+  push:
+    branches:
+      - devbranch
+jobs:
+  my-first-job:
+    name: my first job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world" 
