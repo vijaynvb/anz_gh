@@ -1,7 +1,7 @@
 name: 4-EventTriggers
 on:
   schedule:
-    - cron: '*/1 0 * * *' #run evey 1 minutes 
+    - cron: '*/5 0 * * *' #run evey 1 minutes 
   #push:
   #  branches:
   #    - devbranch
