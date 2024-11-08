@@ -30,8 +30,10 @@ runs:
 
     # Step 3: Run tests
     - name: Run tests
+      shell: bash
       run: mvn test
 
     # Step 4: Build with Maven
     - name: Build with Maven
+      shell: bash
       run: mvn clean install
