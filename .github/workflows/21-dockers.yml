@@ -1,0 +1,32 @@
+name: 21-Docker
+
+on:
+  workflow_dispatch:
+      
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+           
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        cache: maven
+
+    - name: Build with Maven
+      run: mvn clean install
+      
+    - name: Build Docker image
+      run: docker build -t "${{ secrets.DOCKER_USERNAME }}"/app .
+
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+    - name: Push image to Docker Hub
+      run: docker push "${{ secrets.DOCKER_USERNAME }}"/app
