@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/20-ReusableWorkflows-Defnition.yaml
+    uses: ./.github/workflows/20-ReusableWorkflows-Defnition.yml
     with:
       target-directory: dummmy-dir
   print-outputs:
