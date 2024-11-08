@@ -1,0 +1,13 @@
+name: 23-Deploy
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+        
+        - name: execute kubectl command 
+          run: kubectl apply -f new-deployment.yaml

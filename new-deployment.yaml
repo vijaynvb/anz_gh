@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: todo-app-container
-          image: <docker-hub-name>/todoapp
+          image: vijaynvb/app
           ports:
             - containerPort: 8081
 ---
