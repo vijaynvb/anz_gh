@@ -1,0 +1,24 @@
+name: 19-CustomActions-Composite
+run-name: 19-CustomActions-Composite
+
+on: workflow_dispatch
+
+env:
+  working-directory: ./  # Default working directory
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout repository
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Setup Java & Maven dependencies
+      - name: Setup Java & Maven dependencies
+        uses: ./.github/actions/composite-cache-deps
+        with:
+          java-version: 11
+          working-dir: ${{ env.working-directory }}  # Use specified working directory
+
+
